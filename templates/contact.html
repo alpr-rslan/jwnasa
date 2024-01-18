@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+<h3>Contact Us</h3>
+<!-- Buraya Contact Us Sayfasının html kodu gelecek-->
+
+<section class="mb-4">
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Us</h2>
+    <p class="text-center w-responsive mx-auto mb-5">Herhangi bir sorunuz mu var? Lütfen bize doğrudan ulaşın. Ekibimiz size birkaç saat içinde geri dönecektir.</p>
+    <div class="row">
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="/submit" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your Name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">E-mail</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="container-fluid">
+    <div class="map-responsive" style="width: 400px; height: 400px; margin: 0 auto;">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Marmara+Üniversitesi+Recep+Tayyip+Erdoğan+Külliyesi" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
