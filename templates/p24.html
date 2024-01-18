@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <title>Title</title>
     <style>
         body{
-
         background-color:black;
-
         }
-    .tool{
+        .tool{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     }
-        .logo{
+    .logo{
     margin-top:10px;
     margin-left:20px;
     color:#b0dfd1;
@@ -60,29 +59,55 @@
 
             padding:0;
         }
-        .f1{
-        color:white;
-        font-size:30px;
+
+    .info{
+    display:flex;
+        }
+        .pag{
+        text-align:center;
+        margin-right:20px;
+        }
+        .pag a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            background-color: #ddd;
+            margin: 0 4px;
+            margin-bottom:100px;
+        }
+
+        .pag a.active {
+            background-color: #333;
+            color: white;
+       }
+       .im1,
+       .im2,.im3{
         display:grid;
         justify-content:center;
+        margin-top:100px;
         text-align:center;
-        column-gap:40px;
+        border-style:solid;
+        border-radius:5px;
         }
-        .t1,.t2,.t3{
-        font-family:  "Lucida Handwriting";
+        .iminfo{
+        opacity:0;
         }
-        .ex1,.ex2,.ex3{
-        width:900px;
-        font-family:  "Lucida Handwriting";
-        font-size:23px;
-        text-shadow:2px 2px 4px #DCDFDC;
-        margin-bottom:40px;
+        .im1:hover .iminfo,
+        .im2:hover .iminfo,
+        .im3:hover .iminfo{
+        opacity:0.5;
+        background-color:#eff5f5;
+        cursor:pointer;
+        font-size:20px;
+        height:30px;
+        border-radius:5px;
+
         }
-        </style>
+    </style>
 </head>
 <body>
-
- <div class="tool">
+<div class="tool">
     <div class="logo">James Webb Space Telescope News</div>
     <ul>
         <li><a href="{{url_for('home')}}">Home</a></li>
@@ -97,26 +122,18 @@
         <li><a href="{{url_for('contact')}}">Contact</a></li>
         <li><a href="{{url_for('about')}}">About us</a></li>
     </ul>
-</div> 
-
-    <div class="f1" >
-        <div>
-            <div class="t1" style="margin-bottom:30px;margin-top:30px">Who we are?</div>
-      <p class="ex1">We are Melih Alparslan Aksoy and Alper Arslan. We wish you very warm welcome from our hearts to our website.
-          We are the 4th degree of Electric-Electronics Engineering Bachelor degree. </p>
+</div>
+ <div class="im1">
+     <img src="https://live.staticflickr.com/65535/53454927782_a13751ddd7_c.jpg">
+ </div>
+<div class="im2">
+    <img src="https://live.staticflickr.com/65535/53455855776_2df7960047_c.jpg">
+</div>
+<div class="im3" style="margin-bottom:100px;">
+    <img src="https://live.staticflickr.com/65535/53453268481_48fe912110_c.jpg">
+</div>
+ <div class="pag">
+            <a href="{{url_for('new1')}}" class="active">1</a>
         </div>
-         <div>
-            <div class="t2" style="margin-bottom:30px;">Why are we doing this?</div>
-      <p class="ex2">This is our Engineering Projects. We wanted to take people interaction who are wondered about outer space. </p>
-        </div>
-         <div>
-           <div class="t3">What can be changed in this site in future?</div>
-      <p class="ex3">With getting new pictures and data from JWST, number of images can be increased. Other navigation bar selection can be put.</p>
-        </div>
-
-
-
-
-    </div>
 </body>
 </html>

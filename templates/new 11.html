@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+        background-color:black;
+        }
+        .tool{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+    .logo{
+    margin-top:10px;
+    margin-left:20px;
+    color:#b0dfd1;
+    font-size:30px;
+    }
+    ul{
+    list-style:none;
+    margin:0;
+    padding:o;
+    display:flex;
+    }
+    ul li{
+    display:inline-block;
+    position:relative;
+    }
+    ul li a{
+    display:block;
+    padding:20px 25px;
+    text-decoration:none;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    }
+            ul li ul.dropdown li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li ul.dropdown {
+            width: 100%;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+        background-color:#c2d6d6;
+        border-radius:5px;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+
+            padding:0;
+        }
+
+    .info{
+    display:flex;
+        }
+        .pag{
+        text-align:center;
+        margin-right:20px;
+        }
+        .pag a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            background-color: #ddd;
+            margin: 0 4px;
+        }
+
+        .pag a.active {
+            background-color: #333;
+            color: white;
+       }
+       .im1,.im2,.im3,
+       .im4,.im5,.im6,.im7,.im8,.im9,.im10,.im11,.im12,.im13,.im14,.im15{
+        display:grid;
+        justify-content:center;
+        margin-top:100px;
+        text-align:center;
+        border-style:solid;
+        border-radius:5px;
+        }
+        .iminfo{
+        opacity:0;
+        }
+        .im1:hover .iminfo,
+        .im2:hover .iminfo,
+        .im3:hover .iminfo,
+        .im4:hover .iminfo,
+        .im5:hover .iminfo,
+        .im6:hover .iminfo,
+        .im7:hover .iminfo,
+        .im8:hover .iminfo,
+        .im9:hover .iminfo,
+        .im10:hover .iminfo,
+        .im11:hover .iminfo,
+        .im12:hover .iminfo,
+        .im13:hover .iminfo,
+        .im14:hover .iminfo,
+        .im15:hover .iminfo{
+        opacity:0.5;
+        background-color:#eff5f5;
+        cursor:pointer;
+        font-size:20px;
+        height:30px;
+        border-radius:5px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="tool">
+    <div class="logo">James Webb Space Telescope News</div>
+    <ul>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li>
+            <a href="{{url_for('photo')}}">Photos &#10534;</a>
+            <ul class="dropdown">
+                <li><a href="{{url_for('p24')}}">2024 Photos</a></li>
+                <li><a href="{{url_for('p23')}}">2023 Photos</a></li>
+                <li><a href="{{url_for('p22')}}">2022 Photos</a></li>
+            </ul>
+        </li>
+        <li><a href="{{url_for('contact')}}">Contact</a></li>
+        <li><a href="{{url_for('about')}}">About us</a></li>
+    </ul>
+</div>
+  <div class="im1">
+      <img src="https://live.staticflickr.com/65535/52577236876_d5b50617db_z.jpg">
+      <div class="iminfo">A Wreath of Star Formation in NGC 7469</div>
+  </div>
+  <div class="im2">
+      <img src="https://live.staticflickr.com/65535/52565304936_cb449941af_c.jpg">
+      <div class="iminfo">NASA’s Webb Unveils Young Stars in Early Stages of Formation</div>
+  </div>
+  <div class="im3">
+      <img src="https://live.staticflickr.com/65535/52565832838_25774a5081_c.jpg">
+      <div class="iminfo">NASA’s Webb Unveils Young Stars in Early Stages of Formation (Detail)</div>
+  </div>
+  <div class="im4">
+      <img src="https://live.staticflickr.com/65535/52563599528_6299d221c5_c.jpg">
+      <div class="iminfo">Webb Glimpses Field of Extragalactic PEARLS, Studded With Galactic Diamonds (cropped image)</div>
+  </div>
+  <div class="im5">
+     <img src="https://live.staticflickr.com/65535/52563062576_1ed355f1e4_c.jpg">
+      <div class="iminfo">Webb Glimpses Field of Extragalactic PEARLS, Studded With Galactic Diamonds</div>
+  </div>
+
+  <div class="im6">
+      <img src="https://live.staticflickr.com/65535/52553294668_15a4085d01_z.jpg">
+      <div class="iminfo">NASA’s Webb Reaches New Milestone in Quest for Distant Galaxies (Just NIRCam)</div>
+  </div>
+
+  <div class="im7">
+      <img src="https://live.staticflickr.com/65535/52551161139_f8b8efd6aa_c.jpg">
+      <div class="iminfo">NASA’s Webb Indicates Several Stars ‘Stirred Up’ Southern Ring Nebula</div>
+  </div>
+  <div class="im8">
+      <img src="https://live.staticflickr.com/65535/52550410612_93280cb2b3_c.jpg">
+      <div class="iminfo">NASA’s Webb Indicates Several Stars ‘Stirred Up’ Southern Ring Nebula</div>
+  </div>
+  <div class="im9">
+      <img src="https://live.staticflickr.com/65535/52535926601_2b6ea51b92_c.jpg">
+      <div class="iminfo">Titan (NIRCam and NIRC-2)</div>
+  </div>
+  <div class="im10">
+     <img src="https://live.staticflickr.com/65535/52536239214_bd41ff9829_c.jpg">
+      <div class="iminfo">Titan (NIRCam and NIRC-2, annotated)</div>
+  </div>
+  <div class="im11">
+     <img src="https://live.staticflickr.com/65535/52536469908_04d79f33f4_c.jpg">
+      <div class="iminfo">Titan (NIRCam)</div>
+  </div>
+  <div class="im12">
+     <img src="https://live.staticflickr.com/65535/52535458727_cd0af83f5c_c.jpg">
+      <div class="iminfo">Titan (NIRCam, annotated)</div>
+  </div>
+  <div class="im13">
+     <img src="https://live.staticflickr.com/65535/52534406448_bc47b724f7_z.jpg">
+      <div class="iminfo">Pillars of Creation (NIRCam and MIRI Composite Image)</div>
+  </div>
+  <div class="im14">
+     <img src="https://live.staticflickr.com/65535/52533787586_772fa3843c_c.jpg">
+      <div class="iminfo">Galactic Get-Together</div>
+  </div>
+  <div class="im15" style="margin-bottom:100px;">
+     <img src="https://live.staticflickr.com/65535/52534361533_51fefeae33_c.jpg">
+      <div class="iminfo">Galactic Get-Together (Hubble and Webb)</div>
+  </div>
+<div class="pag" style="margin-bottom:100px;">
+            <a href="{{url_for('n11')}}" class="active">1</a>
+            <a href="{{url_for('n12')}}" >2</a>
+            <a href="{{url_for('n13')}}">3</a>
+            <a href="{{url_for('n14')}}">4</a>
+            <a href="{{url_for('n15')}}">5</a>
+        </div>
+</body>
+</html>

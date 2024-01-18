@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     body{
+        background-color:black;
+        }
+        .tool{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+    .logo{
+    margin-top:10px;
+    margin-left:20px;
+    color:#b0dfd1;
+    font-size:30px;
+    }
+    ul{
+    list-style:none;
+    margin:0;
+    padding:o;
+    display:flex;
+    }
+    ul li{
+    display:inline-block;
+    position:relative;
+    }
+    ul li a{
+    display:block;
+    padding:20px 25px;
+    text-decoration:none;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    }
+            ul li ul.dropdown li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li ul.dropdown {
+            width: 100%;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+        background-color:#c2d6d6;
+        border-radius:5px;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+
+            padding:0;
+        }
+
+    .info{
+    display:flex;
+        }
+        .pag{
+        text-align:center;
+        margin-right:20px;
+        }
+        .pag a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            background-color: #ddd;
+            margin: 0 4px;
+            margin-bottom:100px;
+        }
+
+        .pag a.active {
+            background-color: #333;
+            color: white;
+        }
+        .im1,.im2,.im3,
+       .im4,.im5,.im6,.im7,.im8,.im9,.im10,.im11,.im12,.im13{
+        display:grid;
+        justify-content:center;
+        margin-top:100px;
+        text-align:center;
+        border-style:solid;
+        border-radius:5px;
+        }
+        .iminfo{
+        opacity:0;
+        }
+        .im1:hover .iminfo,
+        .im2:hover .iminfo,
+        .im3:hover .iminfo,
+        .im4:hover .iminfo,
+        .im5:hover .iminfo,
+        .im6:hover .iminfo,
+        .im7:hover .iminfo,
+        .im8:hover .iminfo,
+        .im9:hover .iminfo,
+        .im10:hover .iminfo,
+        .im11:hover .iminfo,
+        .im12:hover .iminfo,
+        .im13:hover .iminfo{
+        opacity:0.5;
+        background-color:#eff5f5;
+        cursor:pointer;
+        font-size:20px;
+        height:30px;
+        border-radius:5px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="tool">
+    <div class="logo">James Webb Space Telescope News</div>
+    <ul>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li>
+            <a href="{{url_for('photo')}}">Photos &#10534;</a>
+            <ul class="dropdown">
+                <li><a href="{{url_for('p24')}}">2024 Photos</a></li>
+                <li><a href="{{url_for('p23')}}">2023 Photos</a></li>
+                <li><a href="{{url_for('p22')}}">2022 Photos</a></li>
+            </ul>
+        </li>
+        <li><a href="{{url_for('contact')}}">Contact</a></li>
+        <li><a href="{{url_for('about')}}">About us</a></li>
+    </ul>
+</div>
+<div class="im1">
+   <img src="https://live.staticflickr.com/65535/52880781631_1393b805ee_z.jpg">
+    <div class="iminfo">Nearby Planetary System Seen in Breathtaking Detail, Fomalhaut Dusty Debris Disk (MIRI Image)</div>
+ </div>
+<div class="im2">
+   <img src="https://live.staticflickr.com/65535/52880794451_c3f5478e82_c.jpg">
+    <div class="iminfo">Fomalhaut Dusty Debris Disk (MIRI Compass Image)</div>
+ </div>
+<div class="im3">
+   <img src="https://live.staticflickr.com/65535/52842911050_a91359615e_z.jpg">
+    <div class="iminfo">Webb Reveals Early-Universe Prequel to Huge Galaxy Cluster</div>
+ </div>
+<div class="im4">
+   <img src="https://live.staticflickr.com/65535/53222195326_d19f31ec00_z.jpg">
+    <div class="iminfo">Arp 220 (NIRCam + MIRI Image)</div>
+ </div>
+<div class="im5">
+   <img src="https://live.staticflickr.com/65535/52812011031_2db748e7de_c.jpg">
+    <div class="iminfo">Webb Shows Areas of New Star Formation and Galactic Evolution</div>
+ </div>
+<div class="im6">
+   <img src="https://live.staticflickr.com/65535/52812028196_5f59765207_c.jpg">
+    <div class="iminfo">Webb Shows Areas of New Star Formation and Galactic Evolution</div>
+ </div>
+<div class="im7">
+   <img src="https://live.staticflickr.com/65535/52799298357_2e51b73019_z.jpg">
+     <div class="iminfo">Webb Reveals Never-Before-Seen Details in Cassiopeia A</div>
+ </div>
+<div class="im8">
+   <img src="https://live.staticflickr.com/65535/52797109227_0a628c79b9_z.jpg">
+    <div class="iminfo">NASA’s Webb Scores Another Ringed World With New Image of Uranus</div>
+ </div>
+<div class="im10">
+   <img src="https://live.staticflickr.com/65535/52797919139_93262a7e5b_z.jpg">
+    <div class="iminfo">NASA’s Webb Scores Another Ringed World With New Image of Uranus</div>
+ </div>
+<div class="im11">
+   <img src="https://live.staticflickr.com/65535/52777397541_3d20263820_c.jpg">
+    <div class="iminfo">Cosmic seahorse</div>
+ </div>
+<div class="im12">
+   <img src="https://live.staticflickr.com/65535/52747003647_80a4b7f628_z.jpg">
+    <div class="iminfo">NASA’s Webb Telescope Captures Rarely Seen Prelude to Supernova (NIRCam and MIRI Image)</div>
+ </div>
+<div class="im13" style="margin-bottom:100px;">
+   <img src="https://live.staticflickr.com/65535/52748025943_6f91d32bee_c.jpg">
+    <div class="iminfo">NASA’s Webb Telescope Captures Rarely Seen Prelude to Supernova (MIRI Image)</div>
+ </div>
+
+
+<div class="pag">
+            <a href="{{url_for('new1')}}">1</a>
+            <a href="{{url_for('new2')}}">2</a>
+            <a href="{{url_for('new3')}}">3</a>
+            <a href="{{url_for('new4')}}">4</a>
+            <a href="{{url_for('new5')}}">5</a>
+            <a href="{{url_for('new6')}}" class="active">6</a>
+            <a href="{{url_for('new7')}}">7</a>
+        </div>
+</body>
+</html>

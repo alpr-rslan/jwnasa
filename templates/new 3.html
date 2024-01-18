@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+        background-color:black;
+        }
+       .tool{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+    .logo{
+    margin-top:10px;
+    margin-left:20px;
+    color:#b0dfd1;
+    font-size:30px;
+    }
+    ul{
+    list-style:none;
+    margin:0;
+    padding:o;
+    display:flex;
+    }
+    ul li{
+    display:inline-block;
+    position:relative;
+    }
+    ul li a{
+    display:block;
+    padding:20px 25px;
+    text-decoration:none;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    }
+            ul li ul.dropdown li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li ul.dropdown {
+            width: 100%;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+        background-color:#c2d6d6;
+        border-radius:5px;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+
+            padding:0;
+        }
+    .info{
+    display:flex;
+        }
+        .pag{
+        text-align:center;
+        margin-right:20px;
+        }
+        .pag a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            background-color: #ddd;
+            margin: 0 4px;
+            margin-bottom:100px;
+        }
+
+        .pag a.active {
+            background-color: #333;
+            color: white;
+        }
+        .im1,.im2,.im3,
+       .im4,.im5,.im6,.im7,.im8,.im9,.im10,.im11,.im12,.im13,.im14,.im15,.im16{
+        display:grid;
+        justify-content:center;
+        margin-top:100px;
+        text-align:center;
+        border-style:solid;
+        border-radius:5px;
+        }
+        .iminfo{
+        opacity:0;
+        }
+        .im1:hover .iminfo,
+        .im2:hover .iminfo,
+        .im3:hover .iminfo,
+        .im4:hover .iminfo,
+        .im5:hover .iminfo,
+        .im6:hover .iminfo,
+        .im7:hover .iminfo,
+        .im8:hover .iminfo,
+        .im9:hover .iminfo,
+        .im10:hover .iminfo,
+        .im11:hover .iminfo,
+        .im12:hover .iminfo,
+        .im13:hover .iminfo,
+        .im14:hover .iminfo,
+        .im15:hover .iminfo,
+        .im16:hover .iminfo{
+        opacity:0.5;
+        background-color:#eff5f5;
+        cursor:pointer;
+        font-size:20px;
+        height:30px;
+        border-radius:5px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="tool">
+    <div class="logo">James Webb Space Telescope News</div>
+    <ul>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li>
+            <a href="{{url_for('photo')}}">Photos &#10534;</a>
+            <ul class="dropdown">
+                <li><a href="{{url_for('p24')}}">2024 Photos</a></li>
+                <li><a href="{{url_for('p23')}}">2023 Photos</a></li>
+                <li><a href="{{url_for('p22')}}">2022 Photos</a></li>
+            </ul>
+        </li>
+        <li><a href="{{url_for('contact')}}">Contact</a></li>
+        <li><a href="{{url_for('about')}}">About us</a></li>
+    </ul>
+</div>
+  <div class="im1">
+      <img src="https://live.staticflickr.com/65535/53221303192_d7d0bc2d5b_c.jpg">
+      <div class="iminfo">NIRCam’s view of NGC 6822</div>
+  </div>
+  <div class="im2">
+      <img src="https://live.staticflickr.com/65535/53204043498_15929ab274_w.jpg">
+      <div class="iminfo">NASA’s Webb Finds Carbon Source on Surface of Jupiter’s Moon Europa (NIRCam Image)</div>
+  </div>
+  <div class="im3">
+      <img src="https://live.staticflickr.com/65535/53204043498_15929ab274_w.jpg">
+      <div class="iminfo">NASA's Webb Snaps Supersonic Outflow of Young Star</div>
+  </div>
+  <div class="im4">
+      <img src="https://live.staticflickr.com/65535/53186159982_b23bcfe645_c.jpg">
+      <div class="iminfo">Webb Reveals New Structures Within Iconic Supernova Supernova 1987a (NIRCam Image)</div>
+  </div>
+ <div class="im5">
+      <img src="https://live.staticflickr.com/65535/53154715451_2170b0f813_z.jpg">
+     <div class="iminfo">Webb Reveals New Structures Within Iconic Supernova Supernova 1987a (Labeled Image)</div>
+  </div>
+<div class="im6">
+      <img src="https://live.staticflickr.com/65535/53154921769_ba35013db0_z.jpg">
+    <div class="iminfo">M51 (NIRCam image)</div>
+  </div>
+<div class="im7">
+      <img src="https://live.staticflickr.com/65535/53151185919_710bd31069_c.jpg">
+    <div class="iminfo">M51 (MIRI image)</div>
+  </div>
+<div class="im8">
+      <img src="https://live.staticflickr.com/65535/53150967876_1c5cbf92c4_c.jpg">
+    <div class="iminfo">Webb Reveals Intricate Details in the Remains of a Dying Star (NIRCam image)</div>
+  </div>
+<div class="im9">
+      <img src="https://live.staticflickr.com/65535/53151475103_c081feb366_c.jpg">
+    <div class="iminfo">Webb Reveals Intricate Details in the Remains of a Dying Star (MIRI image)</div>
+  </div>
+<div class="im10">
+      <img src="https://live.staticflickr.com/65535/53132483298_b438c282c5_z.jpg">
+    <div class="iminfo">Webb Reveals Colors of Earendel, Most Distant Star Ever Detected</div>
+  </div>
+<div class="im11">
+      <img src="https://live.staticflickr.com/65535/53131996331_e5d07878dd_c.jpg">
+    <div class="iminfo">Sunrise Arc (NIRCam Image)</div>
+  </div>
+<div class="im12">
+      <img src="https://live.staticflickr.com/65535/53104943445_33a990cecf_z.jpg">
+    <div class="iminfo">Sunrise Arc highlight (NIRCam Image)</div>
+  </div>
+<div class="im13">
+      <img src="https://live.staticflickr.com/65535/53104762289_c299c58859_z.jpg">
+    <div class="iminfo">Webb Reveals Colors of Earendel, Most Distant Star Ever Detected</div>
+  </div>
+<div class="im14">
+      <img src="https://live.staticflickr.com/65535/53104960050_368722a6ee_z.jpg">
+    <div class="iminfo">Webb Spotlights Gravitational Arcs in ‘El Gordo’ Galaxy Cluster (NIRCam Image)</div>
+  </div>
+
+  <div class="im15">
+      <img src="https://live.staticflickr.com/65535/53089299623_876dc7e8ab_z.jpg">
+      <div class="iminfo">Sunrise Arc highlight (NIRCam Image)</div>
+
+  </div>
+  <div class="im16" style="margin-bottom:100px;">
+      <img src="https://live.staticflickr.com/65535/53088810106_3575d4ca35_c.jpg">
+      <div class="iminfo">Sunrise Arc highlight (NIRCam Image)</div>
+  </div>
+
+
+<div class="pag">
+            <a href="{{url_for('new1')}}" >1</a>
+            <a href="{{url_for('new2')}}">2</a>
+            <a href="{{url_for('new3')}}" class="active">3</a>
+            <a href="{{url_for('new4')}}">4</a>
+            <a href="{{url_for('new5')}}">5</a>
+            <a href="{{url_for('new6')}}">6</a>
+            <a href="{{url_for('new7')}}">7</a>
+        </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

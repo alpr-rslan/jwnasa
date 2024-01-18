@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     body{
+        background-color:black;
+        }
+        .tool{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+    .logo{
+    margin-top:10px;
+    margin-left:20px;
+    color:#b0dfd1;
+    font-size:30px;
+    }
+    ul{
+    list-style:none;
+    margin:0;
+    padding:o;
+    display:flex;
+    }
+    ul li{
+    display:inline-block;
+    position:relative;
+    }
+    ul li a{
+    display:block;
+    padding:20px 25px;
+    text-decoration:none;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    }
+            ul li ul.dropdown li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li ul.dropdown {
+            width: 100%;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+        background-color:#c2d6d6;
+        border-radius:5px;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+
+            padding:0;
+        }
+
+    .info{
+    display:flex;
+        }
+        .pag{
+        text-align:center;
+        margin-right:20px;
+        }
+        .pag a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            background-color: #ddd;
+            margin: 0 4px;
+            margin-bottom:100px;
+        }
+
+        .pag a.active {
+            background-color: #333;
+            color: white;
+        }
+        .im1,.im2,.im3,
+       .im4,.im5,.im6,.im7,.im8,.im9,.im10,.im11,.im12,.im13{
+        display:grid;
+        justify-content:center;
+        margin-top:100px;
+        text-align:center;
+        border-style:solid;
+        border-radius:5px;
+        }
+        .iminfo{
+        opacity:0;
+        }
+        .im1:hover .iminfo,
+        .im2:hover .iminfo,
+        .im3:hover .iminfo,
+        .im4:hover .iminfo,
+        .im5:hover .iminfo,
+        .im6:hover .iminfo,
+        .im7:hover .iminfo,
+        .im8:hover .iminfo,
+        .im9:hover .iminfo,
+        .im10:hover .iminfo,
+        .im11:hover .iminfo,
+        .im12:hover .iminfo,
+        .im13:hover .iminfo{
+        opacity:0.5;
+        background-color:#eff5f5;
+        cursor:pointer;
+        font-size:20px;
+        height:30px;
+        border-radius:5px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="tool">
+    <div class="logo">James Webb Space Telescope News</div>
+    <ul>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li>
+            <a href="{{url_for('photo')}}">Photos &#10534;</a>
+            <ul class="dropdown">
+                <li><a href="{{url_for('p24')}}">2024 Photos</a></li>
+                <li><a href="{{url_for('p23')}}">2023 Photos</a></li>
+                <li><a href="{{url_for('p22')}}">2022 Photos</a></li>
+            </ul>
+        </li>
+        <li><a href="{{url_for('contact')}}">Contact</a></li>
+        <li><a href="{{url_for('about')}}">About us</a></li>
+    </ul>
+</div>
+<div class="im1">
+    <img src="https://live.staticflickr.com/65535/53003114489_57371c26ce_z.jpg">
+    <div class="iminfo">Webb Makes First Detection of Crucial Carbon Molecule (Orion Bar NIRCam Image)</div>
+</div>
+<div class="im2">
+    <img src="https://live.staticflickr.com/65535/53003339415_9780e94b9f_c.jpg">
+    <div class="iminfo">Webb Makes First Detection of Crucial Carbon Molecule (Orion Bar Collage - NIRCam and MIRI)</div>
+</div>
+<div class="im3">
+    <img src="https://live.staticflickr.com/65535/53003339940_87b19c9810_z.jpg">
+    <div class="iminfo">Webb Makes First Detection of Crucial Carbon Molecule (Orion Bar MIRI Image)</div>
+</div>
+<div class="im4">
+    <img src="https://live.staticflickr.com/65535/52969542198_53f77042c9_c.jpg">
+     <div class="iminfo">NASA’s Webb Proves Galaxies Transformed the Early Universee</div>
+</div>
+<div class="im5">
+    <img src="https://live.staticflickr.com/65535/52958010034_6ebcd8a2ec_c.jpg">
+    <div class="iminfo">Webb Telescope Detects Universe’s Most Distant Organic Molecules</div>
+</div>
+<div class="im6">
+    <img src="https://live.staticflickr.com/65535/52945749968_6349c5380f_c.jpg">
+    <div class="iminfo">Webb Peers Behind the Bars of NGC 5068 (NIRCam Version)</div>
+</div>
+<div class="im7">
+    <img src="https://live.staticflickr.com/65535/52945664330_8a7be67ac8_c.jpg">
+    <div class="iminfo">Webb Peers Behind the Bars of NGC 5068 (MIRI Version)</div>
+</div>
+<div class="im8">
+    <img src="https://live.staticflickr.com/65535/52945733363_7e8fa84812_c.jpg">
+    <div class="iminfo">Webb Peers Behind the Bars of NGC 5068</div>
+</div>
+<div class="im9">
+    <img src="https://live.staticflickr.com/65535/52919691732_6329b963d5_z.jpg">
+    <div class="iminfo">NASA's Chandra, Webb Combine for Arresting Views (NGC 346)</div>
+</div>
+<div class="im10">
+    <img src="https://live.staticflickr.com/65535/52920729813_d1dcc1d68a_c.jpg">
+    <div class="iminfo">NASA's Chandra, Webb Combine for Arresting Views (NGC 1672)</div>
+</div>
+<div class="im11">
+    <img src="https://live.staticflickr.com/65535/52920729828_b15408a77e_c.jpg">
+    <div class="iminfo">NASA's Chandra, Webb Combine for Arresting Views (M74)</div>
+</div>
+<div class="im12">
+    <img src="https://live.staticflickr.com/65535/52920269941_01fb05c54d_z.jpg">
+    <div class="iminfo">NASA's Chandra, Webb Combine for Arresting Views (Pillars of Creation)</div>
+</div>
+<div class="im13" style="margin-bottom:100px;">
+    <img src="https://live.staticflickr.com/65535/52900098829_4cb87e8002_z.jpg">
+    <div class="iminfo">NASA’s Webb Finds Water, and a New Mystery, in Rare Main Belt Comet</div>
+</div>
+
+<div class="pag">
+            <a href="{{url_for('new1')}}" >1</a>
+            <a href="{{url_for('new2')}}">2</a>
+            <a href="{{url_for('new3')}}">3</a>
+            <a href="{{url_for('new4')}}">4</a>
+            <a href="{{url_for('new5')}}" class="active">5</a>
+            <a href="{{url_for('new6')}}">6</a>
+            <a href="{{url_for('new7')}}">7</a>
+        </div>
+</body>
+</html>

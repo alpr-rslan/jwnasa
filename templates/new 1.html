@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color:black ; /* Replace with the path to your image */
+
+        }
+        .text1 {
+
+            cursor: pointer;
+            display: flex;
+            justify-content:center;
+            column-gap: 30px;
+             margin-top:50px;
+            margin-bottom:100px;
+        }
+
+        .text1:active {
+            background-color: white;
+        }
+
+       .imtogether{
+        margin-top:100px;
+       display:grid;
+       justify-content:center;
+       align-items:center;
+       column-gap:200px;
+       }
+       .another{
+       display:flex;
+       justify-content:center;
+       align-items:center;
+       column-gap:10px;
+       }
+       .tool{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+         .logo{
+    margin-top:10px;
+    margin-left:20px;
+    color:#b0dfd1;
+    font-size:30px;
+    }
+       ul{
+    list-style:none;
+    margin:0;
+    padding:o;
+    display:flex;
+    }
+    ul li{
+    display:inline-block;
+    position:relative;
+    }
+    ul li a{
+    display:block;
+    padding:20px 25px;
+    text-decoration:none;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    }
+            ul li ul.dropdown li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li ul.dropdown {
+            width: 100%;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+        background-color:#c2d6d6;
+        border-radius:5px;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+
+            padding:0;
+        }
+        .im1,.im2,.im3,
+       .im4,.im5,.im6,.im7,.im8,.im9,.im10,.im11,.im12,.im13,.im14,.im15{
+        display:grid;
+        justify-content:center;
+        margin-top:100px;
+        text-align:center;
+        border-style:solid;
+        border-radius:5px;
+        }
+
+        .iminfo {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Added this line to handle image info for each image */
+        .im1:hover .iminfo,
+        .im2:hover .iminfo,
+        .im3:hover .iminfo,
+        .im4:hover .iminfo,
+        .im5:hover .iminfo,
+        .im6:hover .iminfo,
+        .im7:hover .iminfo,
+        .im8:hover .iminfo,
+        .im9:hover .iminfo,
+        .im10:hover .iminfo,
+        .im11:hover .iminfo,
+        .im12:hover .iminfo,
+        .im13:hover .iminfo,
+        .im14:hover .iminfo,
+        .im15:hover .iminfo{
+            opacity: 0.5;
+        }
+        .pag{
+        text-align:center;
+        margin-right:20px;
+        }
+        .pag a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            background-color: #ddd;
+            margin: 0 4px;
+        }
+
+        .pag a.active {
+            background-color: #333;
+            color: white;
+        }
+        .imn{
+        display:grid;
+        justify-content:center;
+        margin-top:100px;
+        text-align:center;
+        }
+    </style>
+    <title>James Webb Space Telescope Images</title>
+</head>
+<body style="padding-bottom:100px;">
+
+    <div class="tool">
+    <div class="logo">James Webb Space Telescope News</div>
+    <ul>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li>
+            <a href="{{url_for('photo')}}">Photos &#10534;</a>
+            <ul class="dropdown">
+                <li><a href="{{url_for('p24')}}">2024 Photos</a></li>
+                <li><a href="{{url_for('p23')}}">2023 Photos</a></li>
+                <li><a href="{{url_for('p22')}}">2022 Photos</a></li>
+            </ul>
+        </li>
+        <li><a href="{{url_for('contact')}}">Contact</a></li>
+        <li><a href="{{url_for('about')}}">About us</a></li>
+    </ul>
+</div>
+    <div class="imn">
+    <div class="im1" style="display:grid;justify-content:center;margin-top:100px;text-align:center;">
+        <img src="https://live.staticflickr.com/65535/53412181911_39e3192a92_c.jpg" >
+    <div class="iminfo">NASA’s Webb Spots a Second Lensed Supernova in a Distant Galaxy</div>
+    </div>
+
+    <div class="im2" style="display:grid;justify-content:center;margin-top:100px;text-align:center;">
+    <img src="https://live.staticflickr.com/65535/53412182906_71bda6f6ec_c.jpg">
+        <div class="iminfo">NASA’s Webb Spots a Second Lensed Supernova in a Distant Galaxy</div>
+    </div>
+        <div class="im3" style="display:grid;justify-content:center;margin-top:100px;text-align:center;">
+            <img src="https://live.staticflickr.com/65535/53407511697_e4127b1039.jpg" >
+            <div class="iminfo">Galactic Gathering</div>
+        </div>
+
+        <div class="imtogether">
+
+            <div class="im4">
+                <img src="https://live.staticflickr.com/65535/53405989488_c12c5b2532_m.jpg" height="250">
+            <div class="iminfo">NASA's Webb Rings in the Holidays with the Ringed Planet Uranus</div>
+            </div>
+
+            <div class="im5">
+                <img src="https://live.staticflickr.com/65535/53404881117_bccc261c09_m.jpg" height="250">
+            <div class="iminfo">NASA's Webb Rings in the Holidays with the Ringed Planet Uranus</div>
+            </div>
+
+        </div>
+
+        <div class="im6" style="display:flex;justify-content:center;align-items:center;margin-bottom:20px">
+            <img src="https://live.staticflickr.com/65535/53395722120_5b5ded7491_n.jpg">
+            <div class="iminfo">NASA's Webb Identifies Tiniest Free-Floating Brown Dwarf (NIRCam Image)</div>
+        </div>
+        <div class="another">
+            <div class="im7">
+             <img src="https://live.staticflickr.com/65535/53389652123_62aa87433f_n.jpg" height="250">
+              <div class="iminfo">NASA's Webb Stuns With New High-Definition Look at Exploded Star</div>
+            </div>
+            <div class="im8">
+             <img src="https://live.staticflickr.com/65535/53389652523_77867aaf22_m.jpg" height="250">
+              <div class="iminfo">NASA's Webb Stuns With New High-Definition Look at Exploded Star</div>
+            </div>
+            <div class="im9">
+             <img src="https://live.staticflickr.com/65535/53391078649_2c204f8c6b_m.jpg" height="250">
+                <div class="iminfo">Cassiopeia A (NIRCam and MIRI side by side)</div>
+            </div>
+        </div>
+
+        <div class="im10" style="display:flex;justify-content:center;align-items:center;margin-bottom:20px;">
+            <img src="https://live.staticflickr.com/65535/53361000972_ec16844384_m.jpg">
+            <div class="iminfo">Herbig-Haro (HH) 797</div>
+        </div>
+
+            <div class="im11" style="display:flex;justify-content:center;margin-bottom:20px;">
+            <img width="700" height="400" src="//live.staticflickr.com/65535/53344798019_0497a134d8_c.jpg">
+                <div class="iminfo">NASA's Webb Reveals New Features in Heart of Milky Way (NIRCAM image)</div>
+            </div>
+            <div class="im12" style="display:flex;justify-content:center;margin-bottom:20px;">
+            <img src="https://live.staticflickr.com/65535/53347172275_42db63f3c6_b.jpg">
+                <div class="iminfo">Sagittarius C (Annotated NIRCam Image)</div>
+            </div>
+        <div class="im13">
+            <img src="https://live.staticflickr.com/65535/53320910661_b9b66d875c_z.jpg">
+            <div class="iminfo">NASA’s Webb, Hubble Combine to Create Most Colorful View of Universe</div>
+        </div>
+            <div class="im14">
+            <img src="https://live.staticflickr.com/65535/53321378145_08acbec3eb_z.jpg">
+                <div class="iminfo">NASA’s Webb, Hubble Combine to Create Most Colorful View of Universe</div>
+        </div>
+        <div class="im15">
+            <img src="https://live.staticflickr.com/65535/53321377829_e4541f27e6_c.jpg" style="margin-bottom:100px;">
+            <div class="iminfo">NASA’s Webb, Hubble Combine to Create Most Colorful View of Universe (Webb + Hubble)</div>
+        </div>
+
+    </div>
+    </div>
+    <div class="pag">
+            <a href="{{url_for('new1')}}" class="active">1</a>
+            <a href="{{url_for('new2')}}">2</a>
+            <a href="{{url_for('new3')}}">3</a>
+            <a href="{{url_for('new4')}}">4</a>
+            <a href="{{url_for('new5')}}">5</a>
+            <a href="{{url_for('new6')}}">6</a>
+            <a href="{{url_for('new7')}}">7</a>
+        </div>
+</body>
+</html>
+

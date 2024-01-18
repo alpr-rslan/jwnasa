@@ -1,62 +1,268 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            background-color:black ; /* Replace with the path to your image */
 
-{% block body %}
+        }
+        .text1 {
 
-<h3>Contact Us</h3>
-<!-- Buraya Contact Us Sayfasının html kodu gelecek-->
+            cursor: pointer;
+            display: flex;
+            justify-content:center;
+            column-gap: 30px;
+             margin-top:50px;
+            margin-bottom:100px;
+        }
 
-<section class="mb-4">
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Us</h2>
-    <p class="text-center w-responsive mx-auto mb-5">Herhangi bir sorunuz mu var? Lütfen bize doğrudan ulaşın. Ekibimiz size birkaç saat içinde geri dönecektir.</p>
-    <div class="row">
-        <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="/submit" method="POST">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">Your Name</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">E-mail</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Subject</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Message</label>
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Send</button>
-            </form>
-        </div>
+        .text1:active {
+            background-color: white;
+        }
+
+       .imtogether{
+        margin-top:100px;
+       display:grid;
+       justify-content:center;
+       align-items:center;
+       column-gap:200px;
+       }
+       .another{
+       display:flex;
+       justify-content:center;
+       align-items:center;
+       column-gap:10px;
+       }
+       .tool{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+         .logo{
+    margin-top:10px;
+    margin-left:20px;
+    color:#b0dfd1;
+    font-size:30px;
+    }
+       ul{
+    list-style:none;
+    margin:0;
+    padding:o;
+    display:flex;
+    }
+    ul li{
+    display:inline-block;
+    position:relative;
+    }
+    ul li a{
+    display:block;
+    padding:20px 25px;
+    text-decoration:none;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    }
+            ul li ul.dropdown li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li ul.dropdown {
+            width: 100%;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+        background-color:#c2d6d6;
+        border-radius:5px;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+
+            padding:0;
+        }
+        .im1,.im2,.im3,
+       .im4,.im5,.im6,.im7,.im8,.im9,.im10,.im11,.im12,.im13,.im14,.im15{
+        display:grid;
+        justify-content:center;
+        margin-top:100px;
+        text-align:center;
+        border-style:solid;
+        border-radius:5px;
+        }
+
+        .iminfo {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Added this line to handle image info for each image */
+        .im1:hover .iminfo,
+        .im2:hover .iminfo,
+        .im3:hover .iminfo,
+        .im4:hover .iminfo,
+        .im5:hover .iminfo,
+        .im6:hover .iminfo,
+        .im7:hover .iminfo,
+        .im8:hover .iminfo,
+        .im9:hover .iminfo,
+        .im10:hover .iminfo,
+        .im11:hover .iminfo,
+        .im12:hover .iminfo,
+        .im13:hover .iminfo,
+        .im14:hover .iminfo,
+        .im15:hover .iminfo{
+            opacity: 0.5;
+        }
+        .pag{
+        text-align:center;
+        margin-right:20px;
+        }
+        .pag a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            background-color: #ddd;
+            margin: 0 4px;
+        }
+
+        .pag a.active {
+            background-color: #333;
+            color: white;
+        }
+        .imn{
+        display:grid;
+        justify-content:center;
+        margin-top:100px;
+        text-align:center;
+        }
+  
+    header {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    section {
+      margin: 20px 0;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="tool">
+        <div class="logo">James Webb Space Telescope News</div>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li>
+                <a href="{{url_for('photo')}}">Photos &#10534;</a>
+                <ul class="dropdown">
+                    <li><a href="{{url_for('p24')}}">2024 Photos</a></li>
+                    <li><a href="{{url_for('p23')}}">2023 Photos</a></li>
+                    <li><a href="{{url_for('p22')}}">2022 Photos</a></li>
+                </ul>
+            </li>
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
+            <li><a href="{{url_for('about')}}">About us</a></li>
+        </ul>
     </div>
-</section>
 
+    <header>
+      <h1>Contact Us</h1>
+    </header>
 
+    <section>
+      <h2 style="color: white;">Get in Touch</h2>
+      <p style="color: white;">Feel free to reach out to us with any questions or concerns.</p>
 
-<div class="container-fluid">
-    <div class="map-responsive" style="width: 400px; height: 400px; margin: 0 auto;">
+      <form action="#" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </div>
+
+  <div class="container-fluid">
+    <div class="map-responsive" style="margin-left: 150px; width: 400px; height: 400px;">
         <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Marmara+Üniversitesi+Recep+Tayyip+Erdoğan+Külliyesi" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 </div>
 
 
-
-{% endblock %}
-
+</body>
+</html>

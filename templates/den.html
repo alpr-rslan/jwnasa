@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.ejiltalk.org/wp-content/uploads/2021/03/pexels-photo-110854.jpeg'); /* Replace with the path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Set to the height you want */
+        }
+    .tool{
+    display:flex;
+    justify-content:space-between;
+    }
+    .logo{
+    margin-top:10px;
+    margin-left:20px;
+    color:#b0dfd1;
+    font-size:30px;
+    }
+    ul{
+    list-style:none;
+    margin:0;
+    padding:o;
+    display:flex;
+    }
+    ul li{
+    display:inline-block;
+    position:relative;
+    }
+    ul li a{
+    display:block;
+    padding:20px 25px;
+    text-decoration:none;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    }
+            ul li ul.dropdown li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li ul.dropdown {
+            width: 100%;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+        background-color:#c2d6d6;
+        border-radius:5px;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+
+            padding:0;
+        }
+    .info{
+    display:flex;
+
+    border-radius:1px;
+    color:white;
+    margin-left:200px;
+    margin-top:200px;
+        }
+    .info1{
+    display:flex;
+    border-radius:1px;
+    color:white;
+
+        }
+    .inf1,inf{
+    display:flex;
+    }
+
+    .im1{
+    width:150px;
+    height:150px;
+    margin-top:40px;
+    border-radius:10px;
+        }
+    .im2{
+    width:150px;
+    height:150px;
+    margin-top:40px;
+    border-radius:10px;
+        }
+    .inf3{
+    display:flex;
+        }
+    .inf4:hover,.inf:hover{
+    cursor:pointer;
+    background-color:gray;
+    opacity:0.6;
+    border-radius:5px;
+    transition:opacity 0.3s;
+        }
+    .inf{
+    cursor:pointer;
+
+    }
+    .info4:active{
+        }
+    </style>
+</head>
+<body>
+   <div class="tool">
+    <div class="logo">James Webb Space Telescope News</div>
+    <ul>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li>
+            <a href="{{url_for('photo')}}">Photos &#10534;</a>
+            <ul class="dropdown">
+                <li><a href="{{url_for('p24')}}">2024 Photos</a></li>
+                <li><a href="{{url_for('p23')}}">2023 Photos</a></li>
+                <li><a href="{{url_for('p22')}}">2022 Photos</a></li>
+            </ul>
+        </li>
+        <li><a href="{{url_for('contact')}}">Contact</a></li>
+        <li><a href="{{url_for('about')}}">About us</a></li>
+    </ul>
+</div>
+   <div class="info">
+       <div class="inf">
+       <a href="https://en.wikipedia.org/wiki/James_E._Webb" target="_blank" style="text-decoration:none;color:white;">
+       <div >Who is James E.Webb?
+            <div class="inf1">
+          <img  class="im1"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/James_E._Webb%2C_official_NASA_photo%2C_1966.jpg/330px-James_E._Webb%2C_official_NASA_photo%2C_1966.jpg">
+          <div style="margin-left:10px;width:250px;margin-top:10px;">He was the second Administrator of NASA and served 7 years.Webb led NASA from the beginning of the Kennedy administration through the end of the Johnson administration,
+              thus overseeing each of the critical first crewed missions throughout the Mercury and Gemini programs until days before the launch of the first Apollo mission.
+              He also dealt with the Apollo 1 fire.In 2002, the Next Generation Space Telescope was renamed the James Webb Space Telescope as a tribute to Webb.</div>
+            </div>
+           </a>
+       </div>
+       </div>
+       <div class="inf4" style="margin-left:200px;width:500px;">
+       <a href="https://webb.nasa.gov/" target="_blank" style="text-decoration:none;color:white;">
+         <div class="inf2" >What is the James Webb Space Telescope?</div>
+         <div class="inf3" >
+           <img  class="im2"  src="https://smd-cms.nasa.gov/wp-content/uploads/2023/06/jwst-spacecraftpotentialtargetsmontageflip-1200px-4-jpg.webp">
+           <div style="margin-left:10px;margin-top:10px;">The James Webb Space Telescope (JWST) is a cutting-edge infrared space observatory set to succeed the Hubble Space Telescope. Launching in late 2021, it aims to explore the universe's mysteries, observing star and galaxy formation, planetary systems, and more. Equipped with advanced technology, including a segmented mirror, it will enable unprecedented insights into space phenomena, such as exoplanet atmospheres and the early galaxies. A collaboration between NASA, the European Space Agency (ESA), and the Canadian Space Agency (CSA), the JWST promises to revolutionize our understanding of the cosmos.
+
+
+</body>
+</html>

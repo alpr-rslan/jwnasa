@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+        background-color:black;
+        }
+        .tool{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+    .logo{
+    margin-top:10px;
+    margin-left:20px;
+    color:#b0dfd1;
+    font-size:30px;
+    }
+    ul{
+    list-style:none;
+    margin:0;
+    padding:o;
+    display:flex;
+    }
+    ul li{
+    display:inline-block;
+    position:relative;
+    }
+    ul li a{
+    display:block;
+    padding:20px 25px;
+    text-decoration:none;
+    text-align:center;
+    color:white;
+    font-size:20px;
+    }
+            ul li ul.dropdown li {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li ul.dropdown {
+            width: 100%;
+            position: absolute;
+            z-index: 999;
+            display: none;
+        }
+
+        ul li a:hover {
+        background-color:#c2d6d6;
+        border-radius:5px;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+
+            padding:0;
+        }
+
+    .info{
+    display:flex;
+        }
+        .pag{
+        text-align:center;
+        margin-right:20px;
+        }
+        .pag a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: black;
+            background-color: #ddd;
+            margin: 0 4px;
+            margin-bottom:100px;
+        }
+
+        .pag a.active {
+            background-color: #333;
+            color: white;
+       }
+       .im1,
+       .im4,.im5,.im6,.im7,.im8,.im9,.im10,.im11,.im12{
+        display:grid;
+        justify-content:center;
+        margin-top:100px;
+        text-align:center;
+        border-style:solid;
+        border-radius:5px;
+        }
+        .iminfo{
+        opacity:0;
+        }
+        .im1:hover .iminfo,
+        .im2:hover .iminfo,
+        .im3:hover .iminfo,
+        .im4:hover .iminfo,
+        .im5:hover .iminfo,
+        .im6:hover .iminfo,
+        .im7:hover .iminfo,
+        .im8:hover .iminfo,
+        .im9:hover .iminfo,
+        .im10:hover .iminfo,
+        .im11:hover .iminfo,
+        .im12:hover .iminfo{
+        opacity:0.5;
+        background-color:#eff5f5;
+        cursor:pointer;
+        font-size:20px;
+        height:30px;
+        border-radius:5px;
+
+        }
+        .tog1{
+        display:flex;
+        justify-content:center;
+        margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+<div class="tool">
+    <div class="logo">James Webb Space Telescope News</div>
+    <ul>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li>
+            <a href="{{url_for('photo')}}">Photos &#10534;</a>
+            <ul class="dropdown">
+                <li><a href="{{url_for('p24')}}">2024 Photos</a></li>
+                <li><a href="{{url_for('p23')}}">2023 Photos</a></li>
+                <li><a href="{{url_for('p22')}}">2022 Photos</a></li>
+            </ul>
+        </li>
+        <li><a href="{{url_for('contact')}}">Contact</a></li>
+        <li><a href="{{url_for('about')}}">About us</a></li>
+    </ul>
+</div>
+   </div>
+<div class="imn">
+   <div class="im1" style="margin-top:100px;">
+       <img src="https://live.staticflickr.com/65535/53314473249_526848ff78_c.jpg">
+       <div class="iminfo">Pandora Cluster (NIRCam Image)</div>
+   </div>
+    <div class="tog1" >
+        <div class="im2" style="margin-left:100px;">
+         <img src="https://live.staticflickr.com/65535/53314359683_e117e64b78_c.jpg" width="70%" height="100%">
+         <div class="iminfo" style="width:70%;text-align:center;">NASA Telescopes Discover Record-Breaking Black Hole (unlabeled)</div>
+       </div>
+       <div class="im3" >
+         <img src="https://live.staticflickr.com/65535/53314359793_35fd8b8513_c.jpg" width="70%" height="100%">
+         <div class="iminfo" style="width:70%;text-align:center;">NASA Telescopes Discover Record-Breaking Black Hole (labeled)</div>
+       </div>
+    </div>
+
+   <div class="im4">
+       <img src="https://live.staticflickr.com/65535/53299876782_5ca7e72041_c.jpg">
+       <div class="iminfo">M83 MIRI image</div>
+   </div>
+
+
+   <div class="im5">
+       <img src="https://live.staticflickr.com/65535/53300734646_06caaa5252_c.jpg">
+       <div class="iminfo">M83 NIRCam image</div>
+   </div>
+   <div class="im6">
+       <img src="https://live.staticflickr.com/65535/53297865145_06e3b56c6e_z.jpg">
+       <div class="iminfo">The Crab Nebula Seen in New Light by NASA's Webb (NIRCam and MIRI)</div>
+   </div>
+   <div class="im6">
+       <img src="https://live.staticflickr.com/65535/53285145068_3d3660024c_c.jpg">
+       <div class="iminfo">NASA’s Webb Makes First Detection of Heavy Element From Star Merger (unlabeled)</div>
+   </div>
+   <div class="im7">
+       <img src="https://live.staticflickr.com/65535/53284913386_d101e206fa_c.jpg">
+       <div class="iminfo">NASA’s Webb Makes First Detection of Heavy Element From Star Merger (labeled)</div>
+   </div>
+
+
+   <div class="im8">
+       <img src="https://live.staticflickr.com/65535/53268962997_58252d790b_z.jpg">
+       <div class="iminfo">NASA’s Webb Discovers New Feature in Jupiter’s Atmosphere</div>
+   </div>
+   <div class="im9">
+       <img src="https://live.staticflickr.com/65535/53268945742_bc5672f049_c.jpg">
+       <div class="iminfo">NASA’s Webb Discovers New Feature in Jupiter’s Atmosphere</div>
+   </div>
+   <div class="im10">
+       <img src="https://live.staticflickr.com/65535/53248658934_47f59b808f_z.jpg">
+       <div class="iminfo">NASA’s Webb Captures an Ethereal View of NGC 346 (MIRI)</div>
+   </div>
+   <div class="im11">
+       <img src="https://live.staticflickr.com/65535/53229687476_b18d729098_c.jpg">
+       <div class="iminfo">Short-wavelength NIRCam Orion mosaic in ESASky</div>
+   </div>
+   <div class="im12" style="margin-bottom:100px;">
+       <img src="https://live.staticflickr.com/65535/53230009083_7192ac76d5_c.jpg">
+       <div class="iminfo">Long-wavelength NIRCam Orion mosaic in ESASky</div>
+   </div>
+</div>
+
+   <div class="pag">
+            <a href="{{url_for('new1')}}">1</a>
+            <a href="{{url_for('new2')}}" class="active">2</a>
+            <a href="{{url_for('new3')}}">3</a>
+            <a href="{{url_for('new4')}}">4</a>
+            <a href="{{url_for('new5')}}">5</a>
+            <a href="{{url_for('new6')}}">6</a>
+            <a href="{{url_for('new7')}}">7</a>
+        </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
